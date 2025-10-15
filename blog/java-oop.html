@@ -24,6 +24,10 @@
       <div
         class="container position-relative d-flex align-items-center justify-content-between"
       >
+        <a href="../index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <h1 class="sitename">DũngWebBlog</h1>
+        </a>
+
         <nav id="navmenu" class="navmenu">
           <ul>
             <li><a href="../index.html">Trang Chủ</a></li>
@@ -458,151 +462,7 @@
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/main.js"></script>
 
-    <!-- Rating & Comments JavaScript -->
-    <script>
-      // Rating System
-      const stars = document.querySelectorAll(".star");
-      const submitRatingBtn = document.getElementById("submitRating");
-      const ratingMessage = document.getElementById("ratingMessage");
-      let selectedRating = 0;
-
-      stars.forEach((star) => {
-        star.addEventListener("mouseover", () => {
-          const rating = parseInt(star.dataset.rating);
-          highlightStars(rating);
-        });
-
-        star.addEventListener("mouseout", () => {
-          highlightStars(selectedRating);
-        });
-
-        star.addEventListener("click", () => {
-          selectedRating = parseInt(star.dataset.rating);
-          highlightStars(selectedRating);
-          submitRatingBtn.disabled = false;
-        });
-      });
-
-      function highlightStars(rating) {
-        stars.forEach((star, index) => {
-          if (index < rating) {
-            star.classList.add("active");
-          } else {
-            star.classList.remove("active");
-          }
-        });
-      }
-
-      submitRatingBtn.addEventListener("click", () => {
-        if (selectedRating > 0) {
-          submitRatingBtn.disabled = true;
-          submitRatingBtn.textContent = "Đang gửi...";
-
-          setTimeout(() => {
-            ratingMessage.style.display = "block";
-            ratingMessage.className = "rating-message success";
-            ratingMessage.textContent = `Cảm ơn bạn đã đánh giá ${selectedRating} sao! Đánh giá của bạn đã được ghi nhận.`;
-            submitRatingBtn.textContent = "Đã gửi";
-          }, 1000);
-        }
-      });
-
-      // Comments System
-      const commentForm = document.getElementById("commentForm");
-      const commentsList = document.querySelector(".comments-list");
-      const commentsCount = document.querySelector(".comments-count");
-
-      commentForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        const name = document.getElementById("commentName").value;
-        const email = document.getElementById("commentEmail").value;
-        const content = document.getElementById("commentContent").value;
-
-        if (name && email && content) {
-          addComment(name, content);
-          commentForm.reset();
-        }
-      });
-
-      function addComment(name, content) {
-        const newComment = document.createElement("div");
-        newComment.className = "comment";
-
-        const avatar = name.charAt(0).toUpperCase();
-        const currentTime = "vừa xong";
-
-        newComment.innerHTML = `
-          <div class="comment-header">
-            <div class="comment-author">
-              <div class="author-avatar">${avatar}</div>
-              <div class="author-info">
-                <h5>${name}</h5>
-                <span class="comment-date">${currentTime}</span>
-              </div>
-            </div>
-          </div>
-          <div class="comment-content">
-            <p>${content}</p>
-          </div>
-          <div class="comment-actions">
-            <button class="comment-action like-btn">
-              <i class="bi bi-heart"></i>
-              <span class="like-count">0</span>
-            </button>
-            <button class="comment-action reply-btn">
-              <i class="bi bi-reply"></i>
-              Trả lời
-            </button>
-          </div>
-        `;
-
-        commentsList.insertBefore(newComment, commentsList.firstChild);
-
-        const currentCount = parseInt(commentsCount.textContent);
-        commentsCount.textContent = currentCount + 1;
-
-        const likeBtn = newComment.querySelector(".like-btn");
-        addLikeFunctionality(likeBtn);
-
-        newComment.scrollIntoView({ behavior: "smooth", block: "center" });
-      }
-
-      // Like functionality
-      function addLikeFunctionality(likeBtn) {
-        likeBtn.addEventListener("click", () => {
-          const likeCount = likeBtn.querySelector(".like-count");
-          const currentLikes = parseInt(likeCount.textContent);
-          const heart = likeBtn.querySelector("i");
-
-          if (heart.classList.contains("bi-heart")) {
-            heart.classList.remove("bi-heart");
-            heart.classList.add("bi-heart-fill");
-            likeCount.textContent = currentLikes + 1;
-            likeBtn.style.color = "#e74c3c";
-          } else {
-            heart.classList.remove("bi-heart-fill");
-            heart.classList.add("bi-heart");
-            likeCount.textContent = currentLikes - 1;
-            likeBtn.style.color = "";
-          }
-        });
-      }
-
-      // Add like functionality to existing comments
-      document.querySelectorAll(".like-btn").forEach(addLikeFunctionality);
-
-      // Reply functionality
-      document.querySelectorAll(".reply-btn").forEach((replyBtn) => {
-        replyBtn.addEventListener("click", () => {
-          alert("Chức năng trả lời đang được phát triển!");
-        });
-      });
-
-      // Load more comments
-      document.querySelector(".load-more-btn").addEventListener("click", () => {
-        alert("Đã hiển thị tất cả bình luận!");
-      });
-    </script>
+    <!-- Blog Rating & Comments System -->
+    <script src="../assets/js/blog-rating-comments.js"></script>
   </body>
 </html>
