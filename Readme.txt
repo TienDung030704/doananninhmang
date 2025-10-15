@@ -1,10 +1,10 @@
-# Website Portfolio - Nguyễn Tiến Dũng
+# DũngWebBlog - Website Cá Nhân Nguyễn Tiến Dũng
 
 ## Giới thiệu
-Website portfolio cá nhân được phát triển hoàn toàn bởi Nguyễn Tiến Dũng, trình bày thông tin chuyên môn và kinh nghiệm của một Full-stack Developer chuyên về Java và JavaScript.
+Website cá nhân DũngWebBlog được phát triển hoàn toàn bởi Nguyễn Tiến Dũng, trình bày thông tin chuyên môn và kinh nghiệm của một Full-stack Developer chuyên về Java và JavaScript.
 
 ## Thông tin Dự án
-- **Tên dự án**: Portfolio Website - Nguyễn Tiến Dũng
+- **Tên dự án**: DũngWebBlog - Website Cá Nhân & Blog Chuyên Môn
 - **Phiên bản**: 2.0.0
 - **Ngôn ngữ**: Vietnamese (Tiếng Việt)
 - **Tác giả**: Nguyễn Tiến Dũng
@@ -35,7 +35,7 @@ Website portfolio cá nhân được phát triển hoàn toàn bởi Nguyễn Ti
 - **Vị trí trước**: Junior Java Developer tại CodeCraft Vietnam (TP.HCM)
 - Thông tin học vấn và chứng chỉ
 
-### 💼 Portfolio (portfolio.html)
+### 💼 Dự Án (portfolio.html)
 - Showcase các dự án đã thực hiện
 - Chi tiết kỹ thuật và công nghệ sử dụng
 
@@ -95,7 +95,7 @@ Mỗi bài blog được tích hợp **hệ thống rating và comments hoàn ch
 ├── index.html                 # Trang chủ
 ├── about.html                 # Thông tin cá nhân
 ├── resume.html               # CV và kinh nghiệm
-├── portfolio.html            # Danh mục dự án
+├── portfolio.html            # Danh mục dự án và kỹ năng
 ├── contact.html              # Liên hệ
 ├── assets/
 │   ├── css/
@@ -146,7 +146,7 @@ Mỗi bài blog được tích hợp **hệ thống rating và comments hoàn ch
 ## Liên hệ
 - **Email**: Contact thông qua form trên website
 - **Location**: TP. Hồ Chí Minh, Việt Nam
-- **Portfolio**: Xem chi tiết các dự án trong mục Portfolio
+- **Blog**: Xem chi tiết các bài viết chuyên môn trong mục Blog
 
 ---
-*Website được xây dựng với tình yêu và đam mê công nghệ 💻*
+*DũngWebBlog được xây dựng với tình yêu và đam mê công nghệ 💻*
