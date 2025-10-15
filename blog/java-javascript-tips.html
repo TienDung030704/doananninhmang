@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java & JavaScript Tips</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+    <link href="../assets/css/blog-light-theme.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                ><span>Blog</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="java-co-ban.html">Java Cơ Bản</a></li>
+                <li><a href="java-oop.html">Java OOP</a></li>
+                <li><a href="java-spring.html">Java Spring Framework</a></li>
+                <li><a href="java-collections.html">Java Collections</a></li>
+                <li><a href="javascript-co-ban.html">JavaScript Cơ Bản</a></li>
+                <li><a href="javascript-dom.html">JavaScript DOM</a></li>
+                <li><a href="javascript-async.html">JavaScript Async</a></li>
+                <li><a href="javascript-es6.html">JavaScript ES6+</a></li>
+                <li>
+                  <a href="java-javascript-tips.html" class="active"
+                    >Java & JavaScript Tips</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">Programming</span>
+            <h1 class="blog-title">
+              Java & JavaScript - Lessons Learned & Pro Tips
+            </h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Java ≠ JavaScript - Confusion đầu tiên</h2>
+            <p>
+              Tên giống nhau nhưng hoàn toàn khác! Java static typing, compiled,
+              OOP strict. JavaScript dynamic typing, interpreted, functional +
+              OOP. Newbie hay confused, kinh nghiệm là học riêng biệt, đừng
+              compare!
+            </p>
+
+            <h2>Performance mindset khác nhau</h2>
+            <p>
+              Java: Optimize algorithms, memory management, JVM tuning.
+              JavaScript: Optimize DOM manipulation, bundle size, async
+              operations. Mỗi ngôn ngữ có performance bottlenecks riêng!
+            </p>
+
+            <h2>Error handling strategies</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> Checked exceptions force handling,
+                try-with-resources for cleanup
+              </li>
+              <li>
+                <strong>JavaScript:</strong> Try/catch cho sync, Promise.catch()
+                cho async
+              </li>
+              <li>
+                <strong>Common:</strong> Fail fast, meaningful error messages,
+                logging
+              </li>
+            </ul>
+
+            <h2>Code organization patterns</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> Packages, interfaces, design patterns
+                (Singleton, Factory)
+              </li>
+              <li>
+                <strong>JavaScript:</strong> Modules, closures, revealing module
+                pattern
+              </li>
+              <li>
+                <strong>Shared:</strong> SOLID principles, separation of
+                concerns
+              </li>
+            </ul>
+
+            <h2>Testing approaches learned</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> JUnit, Mockito, integration tests với
+                TestContainers
+              </li>
+              <li><strong>JavaScript:</strong> Jest, Cypress, mocking APIs</li>
+              <li>
+                <strong>Philosophy:</strong> Test business logic, not
+                implementation details
+              </li>
+            </ul>
+
+            <h2>Debugging techniques mastered</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> IntelliJ debugger, heap dumps, profiling
+              </li>
+              <li>
+                <strong>JavaScript:</strong> Browser DevTools, console tricks,
+                source maps
+              </li>
+              <li>
+                <strong>Universal:</strong> Rubber duck debugging, binary search
+                approach
+              </li>
+            </ul>
+
+            <h2>Memory management wisdom</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> Understand GC, avoid memory leaks, tune
+                heap size
+              </li>
+              <li>
+                <strong>JavaScript:</strong> Avoid closures traps, remove event
+                listeners, WeakMap/WeakSet
+              </li>
+              <li>
+                <strong>Both:</strong> Profile memory usage, understand
+                reference patterns
+              </li>
+            </ul>
+
+            <h2>Async programming evolution</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> Threads → Executors → CompletableFuture →
+                Virtual Threads
+              </li>
+              <li>
+                <strong>JavaScript:</strong> Callbacks → Promises → Async/Await
+                → Web Workers
+              </li>
+              <li>
+                <strong>Lesson:</strong> Async complexity scales, choose
+                appropriate abstraction
+              </li>
+            </ul>
+
+            <h2>Framework experiences</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> Spring ecosystem overwhelming nhưng
+                powerful
+              </li>
+              <li>
+                <strong>JavaScript:</strong> React/Vue learning curve steep
+                nhưng productive
+              </li>
+              <li><strong>Tip:</strong> Learn fundamentals trước frameworks</li>
+            </ul>
+
+            <h2>Build tools journey</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> Ant → Maven → Gradle (Gradle wins cho
+                flexibility)
+              </li>
+              <li>
+                <strong>JavaScript:</strong> Grunt → Gulp → Webpack → Vite (Vite
+                wins cho speed)
+              </li>
+              <li>
+                <strong>Trend:</strong> Zero-config tools increasingly popular
+              </li>
+            </ul>
+
+            <h2>Code review lessons</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> Check design patterns usage, performance
+                implications
+              </li>
+              <li>
+                <strong>JavaScript:</strong> Bundle size impact, accessibility,
+                browser support
+              </li>
+              <li>
+                <strong>Both:</strong> Readability > cleverness, consistent
+                style
+              </li>
+            </ul>
+
+            <h2>Productivity hacks developed</h2>
+            <ul>
+              <li>
+                <strong>IDE setup:</strong> Custom snippets, key bindings,
+                plugins
+              </li>
+              <li>
+                <strong>Git workflow:</strong> Meaningful commits, branch naming
+                conventions
+              </li>
+              <li>
+                <strong>Documentation:</strong> Code comments explain WHY, not
+                WHAT
+              </li>
+            </ul>
+
+            <h2>Learning strategies that worked</h2>
+            <ul>
+              <li>
+                <strong>Build projects:</strong> Tutorial hell escape through
+                practice
+              </li>
+              <li>
+                <strong>Read source code:</strong> Popular libraries teach best
+                practices
+              </li>
+              <li>
+                <strong>Teach others:</strong> Explaining concepts solidifies
+                understanding
+              </li>
+            </ul>
+
+            <h2>Career advice từ kinh nghiệm</h2>
+            <ul>
+              <li>
+                <strong>Specialize depth:</strong> T-shaped developer - deep in
+                one, broad in many
+              </li>
+              <li>
+                <strong>Stay updated:</strong> Technology changes fast, learning
+                never stops
+              </li>
+              <li>
+                <strong>Soft skills matter:</strong> Communication, teamwork,
+                problem-solving
+              </li>
+            </ul>
+
+            <h2>Common pitfalls to avoid</h2>
+            <ul>
+              <li>
+                <strong>Over-engineering:</strong> YAGNI principle - You Aren't
+                Gonna Need It
+              </li>
+              <li>
+                <strong>Technology chasing:</strong> New ≠ better, evaluate
+                trade-offs
+              </li>
+              <li>
+                <strong>Solo development:</strong> Code reviews, pair
+                programming improve quality
+              </li>
+            </ul>
+
+            <h2>Tools recommendation</h2>
+            <ul>
+              <li>
+                <strong>Java:</strong> IntelliJ IDEA, Maven/Gradle, JProfiler
+              </li>
+              <li>
+                <strong>JavaScript:</strong> VS Code, ESLint/Prettier, Chrome
+                DevTools
+              </li>
+              <li><strong>Both:</strong> Git, Docker, CI/CD pipelines</li>
+            </ul>
+
+            <h2>Kết luận</h2>
+            <p>
+              Java và JavaScript - hai thế giới khác nhau nhưng cùng teach
+              valuable lessons! Java dạy discipline và structure, JavaScript dạy
+              flexibility và rapid development. Mastering cả hai mở rộng career
+              opportunities và programming mindset!
+            </p>
+
+            <div class="back-to-home">
+              <a href="../index.html">← Về Trang Chủ</a>
+            </div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.8</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="rating-count">dựa trên 35 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 80%"></div>
+                  </div>
+                  <span class="bar-count">28</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 17%"></div>
+                  </div>
+                  <span class="bar-count">6</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 3%"></div>
+                  </div>
+                  <span class="bar-count">1</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>
+                Gửi Đánh Giá
+              </button>
+              <div
+                class="rating-message"
+                id="ratingMessage"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">22</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="commentEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">
+                  Gửi Bình Luận
+                </button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                      <h5>Mai Trần</h5>
+                      <span class="comment-date">2 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Tips về performance optimization giữa Java và JavaScript
+                    thực sự hữu ích! Mình đã apply được vào dự án và thấy cải
+                    thiện rõ rệt.
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">8</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">H</div>
+                    <div class="author-info">
+                      <h5>Hoàng Dev</h5>
+                      <span class="comment-date">4 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    So sánh giữa Java và JavaScript từ góc độ thực tế rất thú
+                    vị. Phần debugging tips cực kỳ cần thiết cho fullstack dev!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">12</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+      // Rating System
+      const stars = document.querySelectorAll(".star");
+      const submitRatingBtn = document.getElementById("submitRating");
+      const ratingMessage = document.getElementById("ratingMessage");
+      let selectedRating = 0;
+
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
+          const rating = parseInt(star.dataset.rating);
+          highlightStars(rating);
+        });
+
+        star.addEventListener("mouseout", () => {
+          highlightStars(selectedRating);
+        });
+
+        star.addEventListener("click", () => {
+          selectedRating = parseInt(star.dataset.rating);
+          highlightStars(selectedRating);
+          submitRatingBtn.disabled = false;
+        });
+      });
+
+      function highlightStars(rating) {
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add("active");
+          } else {
+            star.classList.remove("active");
+          }
+        });
+      }
+
+      submitRatingBtn.addEventListener("click", () => {
+        if (selectedRating > 0) {
+          submitRatingBtn.disabled = true;
+          submitRatingBtn.textContent = "Đang gửi...";
+
+          setTimeout(() => {
+            ratingMessage.style.display = "block";
+            ratingMessage.className = "rating-message success";
+            ratingMessage.textContent = `Cảm ơn bạn đã đánh giá ${selectedRating} sao! Đánh giá của bạn đã được ghi nhận.`;
+            submitRatingBtn.textContent = "Đã gửi";
+          }, 1000);
+        }
+      });
+
+      // Comments System
+      const commentForm = document.getElementById("commentForm");
+      const commentsList = document.querySelector(".comments-list");
+      const commentsCount = document.querySelector(".comments-count");
+
+      commentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("commentName").value;
+        const email = document.getElementById("commentEmail").value;
+        const content = document.getElementById("commentContent").value;
+
+        if (name && email && content) {
+          addComment(name, content);
+          commentForm.reset();
+        }
+      });
+
+      function addComment(name, content) {
+        const newComment = document.createElement("div");
+        newComment.className = "comment";
+
+        const avatar = name.charAt(0).toUpperCase();
+        const currentTime = "vừa xong";
+
+        newComment.innerHTML = `
+          <div class="comment-header">
+            <div class="comment-author">
+              <div class="author-avatar">${avatar}</div>
+              <div class="author-info">
+                <h5>${name}</h5>
+                <span class="comment-date">${currentTime}</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-content">
+            <p>${content}</p>
+          </div>
+          <div class="comment-actions">
+            <button class="comment-action like-btn">
+              <i class="bi bi-heart"></i>
+              <span class="like-count">0</span>
+            </button>
+            <button class="comment-action reply-btn">
+              <i class="bi bi-reply"></i>
+              Trả lời
+            </button>
+          </div>
+        `;
+
+        commentsList.insertBefore(newComment, commentsList.firstChild);
+
+        const currentCount = parseInt(commentsCount.textContent);
+        commentsCount.textContent = currentCount + 1;
+
+        const likeBtn = newComment.querySelector(".like-btn");
+        addLikeFunctionality(likeBtn);
+
+        newComment.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Like functionality
+      function addLikeFunctionality(likeBtn) {
+        likeBtn.addEventListener("click", () => {
+          const likeCount = likeBtn.querySelector(".like-count");
+          const currentLikes = parseInt(likeCount.textContent);
+          const heart = likeBtn.querySelector("i");
+
+          if (heart.classList.contains("bi-heart")) {
+            heart.classList.remove("bi-heart");
+            heart.classList.add("bi-heart-fill");
+            likeCount.textContent = currentLikes + 1;
+            likeBtn.style.color = "#e74c3c";
+          } else {
+            heart.classList.remove("bi-heart-fill");
+            heart.classList.add("bi-heart");
+            likeCount.textContent = currentLikes - 1;
+            likeBtn.style.color = "";
+          }
+        });
+      }
+
+      // Add like functionality to existing comments
+      document.querySelectorAll(".like-btn").forEach(addLikeFunctionality);
+
+      // Reply functionality
+      document.querySelectorAll(".reply-btn").forEach((replyBtn) => {
+        replyBtn.addEventListener("click", () => {
+          alert("Chức năng trả lời đang được phát triển!");
+        });
+      });
+
+      // Load more comments
+      document.querySelector(".load-more-btn").addEventListener("click", () => {
+        alert("Đã hiển thị tất cả bình luận!");
+      });
+    </script>
+  </body>
+</html>

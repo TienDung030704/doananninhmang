@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Async</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                ><span>Blog</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="java-co-ban.html">Java Cơ Bản</a></li>
+                <li><a href="java-oop.html">Java OOP</a></li>
+                <li><a href="java-spring.html">Java Spring Framework</a></li>
+                <li><a href="java-collections.html">Java Collections</a></li>
+                <li><a href="javascript-co-ban.html">JavaScript Cơ Bản</a></li>
+                <li><a href="javascript-dom.html">JavaScript DOM</a></li>
+                <li>
+                  <a href="javascript-async.html" class="active"
+                    >JavaScript Async</a
+                  >
+                </li>
+                <li><a href="javascript-es6.html">JavaScript ES6+</a></li>
+                <li>
+                  <a href="java-javascript-tips.html">Java & JavaScript Tips</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">JavaScript</span>
+            <h1 class="blog-title">
+              JavaScript Async - Từ Callback Hell Đến Async Paradise
+            </h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Callback Hell - Địa ngục code lồng nhau</h2>
+            <p>
+              Lần đầu làm API calls với callbacks, tôi tạo ra "pyramid of doom".
+              6 levels nested callbacks để fetch user → posts → comments →
+              likes. Code nhìn như kim tự tháp ngược, debug khó khăn, maintain
+              nightmare!
+            </p>
+
+            <h2>setTimeout() - Bài học đầu tiên về async</h2>
+            <p>
+              Console.log sau setTimeout(0) vẫn chạy cuối cùng? WTF! Đó là lúc
+              tôi học về Event Loop. JavaScript single-threaded nhưng
+              non-blocking. Callback queue, call stack - concepts mở mang tầm
+              nhìn!
+            </p>
+
+            <h2>Promises - Ánh sáng cuối đường hầm</h2>
+            <p>
+              Khi ES6 ra Promises, tôi như được giải thoát! .then() chains thay
+              vì nested callbacks. .catch() để handle errors. Finally có thể
+              viết async code readable hơn! Dù vẫn có .then() hell đôi khi...
+            </p>
+
+            <h2>Async/Await - Game changer thực sự</h2>
+            <p>
+              ES2017 mang đến async/await - tôi shocked! Async code trông như
+              sync code. Không cần .then() chains nữa. try/catch để handle
+              errors. Đây chính là moment tôi "yêu" async programming!
+            </p>
+
+            <h2>Những bug kinh điển với async code</h2>
+            <ul>
+              <li><strong>Forgot await:</strong> Promise pending forever</li>
+              <li>
+                <strong>Parallel vs Sequential:</strong> Promise.all() vs for
+                loop
+              </li>
+              <li>
+                <strong>Error handling:</strong> Unhandled promise rejection
+              </li>
+              <li><strong>Race conditions:</strong> Async operations order</li>
+            </ul>
+
+            <h2>Promise patterns tôi hay dùng</h2>
+            <ul>
+              <li><strong>Promise.all():</strong> Parallel execution</li>
+              <li><strong>Promise.race():</strong> Timeout implementation</li>
+              <li>
+                <strong>Promise.allSettled():</strong> Continue despite failures
+              </li>
+              <li><strong>Promise chaining:</strong> Sequential operations</li>
+            </ul>
+
+            <h2>Fetch API - Goodbye XMLHttpRequest</h2>
+            <p>
+              Từ jQuery.ajax() sang fetch() API - cleaner syntax, promise-based,
+              stream support. Nhưng cũng có gotchas: network errors only reject,
+              404 vẫn resolve. Lesson: đọc docs kỹ!
+            </p>
+
+            <h2>Error handling strategies</h2>
+            <p>
+              Async error handling khó hơn sync! Try/catch với async/await OK,
+              nhưng unhandled rejections vẫn crash app. Học được: global error
+              handlers, proper error boundaries, retry mechanisms.
+            </p>
+
+            <h2>Performance với async operations</h2>
+            <ul>
+              <li>
+                <strong>Avoid unnecessary awaits:</strong> Parallel when
+                possible
+              </li>
+              <li>
+                <strong>Promise.all() cho parallel:</strong> Nhanh hơn
+                sequential
+              </li>
+              <li><strong>Debouncing/Throttling:</strong> Limit API calls</li>
+              <li>
+                <strong>Caching strategies:</strong> Avoid redundant requests
+              </li>
+            </ul>
+
+            <h2>Web APIs và async programming</h2>
+            <p>
+              Fetch, setTimeout, DOM events, Web Workers... Tất cả async! Hiểu
+              Event Loop giúp debug performance issues. Micro-tasks vs
+              macro-tasks - details quan trọng cho senior dev!
+            </p>
+
+            <h2>Node.js async patterns</h2>
+            <p>
+              Backend với Node.js, async everywhere! File I/O, database queries,
+              HTTP requests. Callback patterns, promisify utilities, Stream
+              APIs. Async/await made Node.js development enjoyable!
+            </p>
+
+            <h2>Testing async code</h2>
+            <p>
+              Test async code tricky! Mock APIs, control timers, handle promises
+              properly. Jest với async/await, done callbacks, return promises.
+              Nhiều ways để test, chọn pattern consistent!
+            </p>
+
+            <h2>Modern async patterns</h2>
+            <ul>
+              <li><strong>Async generators:</strong> for await...of loops</li>
+              <li><strong>AbortController:</strong> Cancel requests</li>
+              <li><strong>Top-level await:</strong> ES2022 feature</li>
+              <li><strong>Async iterators:</strong> Stream processing</li>
+            </ul>
+
+            <h2>Kết luận</h2>
+            <p>
+              Async programming từ callback hell đến async paradise! Hiểu Event
+              Loop, master Promises, embrace async/await. Async là heart của
+              modern JavaScript - web apps, Node.js servers, tất cả đều async!
+            </p>
+
+            <div class="back-to-home"><a href="../index.html">← Về trang chủ</a></div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.9</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="rating-count">dựa trên 47 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 89%"></div>
+                  </div>
+                  <span class="bar-count">42</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 11%"></div>
+                  </div>
+                  <span class="bar-count">5</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>
+                Gửi Đánh Giá
+              </button>
+              <div
+                class="rating-message"
+                id="ratingMessage"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">31</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="commentEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">
+                  Gửi Bình Luận
+                </button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">K</div>
+                    <div class="author-info">
+                      <h5>Kiệt Trần</h5>
+                      <span class="comment-date">6 giờ trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Async/await vs Promises explanation rất clear! Mình đã từ
+                    callback hell → promise chains → async/await. Bài này tóm
+                    tắt journey của mình perfectly!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">18</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">H</div>
+                    <div class="author-info">
+                      <h5>Hà Nguyễn</h5>
+                      <span class="comment-date">2 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Event Loop và micro-tasks/macro-tasks phần này cần bookmark!
+                    Senior dev interview thường hỏi những concept này. Thanks
+                    for sharing! 🔥
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">14</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+      // Rating System
+      const stars = document.querySelectorAll(".star");
+      const submitRatingBtn = document.getElementById("submitRating");
+      const ratingMessage = document.getElementById("ratingMessage");
+      let selectedRating = 0;
+
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
+          const rating = parseInt(star.dataset.rating);
+          highlightStars(rating);
+        });
+
+        star.addEventListener("mouseout", () => {
+          highlightStars(selectedRating);
+        });
+
+        star.addEventListener("click", () => {
+          selectedRating = parseInt(star.dataset.rating);
+          highlightStars(selectedRating);
+          submitRatingBtn.disabled = false;
+        });
+      });
+
+      function highlightStars(rating) {
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add("active");
+          } else {
+            star.classList.remove("active");
+          }
+        });
+      }
+
+      submitRatingBtn.addEventListener("click", () => {
+        if (selectedRating > 0) {
+          submitRatingBtn.disabled = true;
+          submitRatingBtn.textContent = "Đang gửi...";
+
+          setTimeout(() => {
+            ratingMessage.style.display = "block";
+            ratingMessage.className = "rating-message success";
+            ratingMessage.textContent = `Cảm ơn bạn đã đánh giá ${selectedRating} sao! Đánh giá của bạn đã được ghi nhận.`;
+            submitRatingBtn.textContent = "Đã gửi";
+          }, 1000);
+        }
+      });
+
+      // Comments System
+      const commentForm = document.getElementById("commentForm");
+      const commentsList = document.querySelector(".comments-list");
+      const commentsCount = document.querySelector(".comments-count");
+
+      commentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("commentName").value;
+        const email = document.getElementById("commentEmail").value;
+        const content = document.getElementById("commentContent").value;
+
+        if (name && email && content) {
+          addComment(name, content);
+          commentForm.reset();
+        }
+      });
+
+      function addComment(name, content) {
+        const newComment = document.createElement("div");
+        newComment.className = "comment";
+
+        const avatar = name.charAt(0).toUpperCase();
+        const currentTime = "vừa xong";
+
+        newComment.innerHTML = `
+          <div class="comment-header">
+            <div class="comment-author">
+              <div class="author-avatar">${avatar}</div>
+              <div class="author-info">
+                <h5>${name}</h5>
+                <span class="comment-date">${currentTime}</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-content">
+            <p>${content}</p>
+          </div>
+          <div class="comment-actions">
+            <button class="comment-action like-btn">
+              <i class="bi bi-heart"></i>
+              <span class="like-count">0</span>
+            </button>
+            <button class="comment-action reply-btn">
+              <i class="bi bi-reply"></i>
+              Trả lời
+            </button>
+          </div>
+        `;
+
+        commentsList.insertBefore(newComment, commentsList.firstChild);
+
+        const currentCount = parseInt(commentsCount.textContent);
+        commentsCount.textContent = currentCount + 1;
+
+        const likeBtn = newComment.querySelector(".like-btn");
+        addLikeFunctionality(likeBtn);
+
+        newComment.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Like functionality
+      function addLikeFunctionality(likeBtn) {
+        likeBtn.addEventListener("click", () => {
+          const likeCount = likeBtn.querySelector(".like-count");
+          const currentLikes = parseInt(likeCount.textContent);
+          const heart = likeBtn.querySelector("i");
+
+          if (heart.classList.contains("bi-heart")) {
+            heart.classList.remove("bi-heart");
+            heart.classList.add("bi-heart-fill");
+            likeCount.textContent = currentLikes + 1;
+            likeBtn.style.color = "#e74c3c";
+          } else {
+            heart.classList.remove("bi-heart-fill");
+            heart.classList.add("bi-heart");
+            likeCount.textContent = currentLikes - 1;
+            likeBtn.style.color = "";
+          }
+        });
+      }
+
+      // Add like functionality to existing comments
+      document.querySelectorAll(".like-btn").forEach(addLikeFunctionality);
+
+      // Reply functionality
+      document.querySelectorAll(".reply-btn").forEach((replyBtn) => {
+        replyBtn.addEventListener("click", () => {
+          alert("Chức năng trả lời đang được phát triển!");
+        });
+      });
+
+      // Load more comments
+      document.querySelector(".load-more-btn").addEventListener("click", () => {
+        alert("Đã hiển thị tất cả bình luận!");
+      });
+    </script>
+  </body>
+</html>

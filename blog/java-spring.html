@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Spring Framework</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                ><span>Blog</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="java-co-ban.html">Java Cơ Bản</a></li>
+                <li><a href="java-oop.html">Java OOP</a></li>
+                <li>
+                  <a href="java-spring.html" class="active"
+                    >Java Spring Framework</a
+                  >
+                </li>
+                <li><a href="java-collections.html">Java Collections</a></li>
+                <li><a href="javascript-co-ban.html">JavaScript Cơ Bản</a></li>
+                <li><a href="javascript-dom.html">JavaScript DOM</a></li>
+                <li><a href="javascript-async.html">JavaScript Async</a></li>
+                <li><a href="javascript-es6.html">JavaScript ES6+</a></li>
+                <li>
+                  <a href="java-javascript-tips.html">Java & JavaScript Tips</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">Java</span>
+            <h1 class="blog-title">
+              Spring Framework - Từ Sợ Hãi Đến Yêu Thích
+            </h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Lần đầu gặp Spring - Cú sốc văn hóa</h2>
+            <p>
+              Sau 4 tháng học Java core, tôi nghĩ mình đã "pro" rồi. Đến khi
+              mentor bảo "Giờ học Spring đi", tôi Google và thấy hàng đống thuật
+              ngữ: DI, IoC, AOP, Bean... Cảm giác như vừa học xong chữ cái lại
+              phải học toán cao cấp!
+            </p>
+
+            <h2>Dependency Injection - Cái gì thế này?</h2>
+            <p>
+              Tuần đầu học DI, tôi hoàn toàn không hiểu tại sao phải phức tạp
+              hóa code. Thay vì <code>new UserService()</code> đơn giản, lại
+              phải dùng <code>@Autowired</code>. Mãi đến khi làm project lớn hơn
+              mới thấy lợi ích khủng khiếp của việc này!
+            </p>
+            <ul>
+              <li>
+                <strong>Trước Spring:</strong> 10 class, 50 dòng new Object(),
+                debug cả ngày
+              </li>
+              <li>
+                <strong>Sau Spring:</strong> Chỉ cần annotation, Spring lo tất
+                cả
+              </li>
+              <li>
+                <strong>Testing:</strong> Mock object dễ dàng, không còn
+                nightmare
+              </li>
+            </ul>
+
+            <h2>Spring Boot - Game changer thực sự</h2>
+            <p>
+              Khi chuyển từ Spring MVC thuần sang Spring Boot, tôi như được giải
+              thoát! Không còn phải config XML dài ngoằng, không còn phải setup
+              Tomcat thủ công. Chỉ cần <code>@SpringBootApplication</code> và
+              chạy main method!
+            </p>
+
+            <h2>Những lần "đập đầu vào tường" với Spring</h2>
+            <ul>
+              <li>
+                <strong>Circular Dependency:</strong> Mất 2 ngày để hiểu tại sao
+                Bean không tạo được
+              </li>
+              <li>
+                <strong>@Transactional:</strong> Dữ liệu không save, hoá ra
+                method không public
+              </li>
+              <li>
+                <strong>Component Scan:</strong> Bean không được tìm thấy vì sai
+                package
+              </li>
+              <li>
+                <strong>Profile:</strong> Config dev khác prod, application
+                crash liên tục
+              </li>
+            </ul>
+
+            <h2>Hành trình từ newbie đến "biết xài"</h2>
+            <p>Quá trình học Spring của tôi:</p>
+            <ul>
+              <li>
+                <strong>Tháng 1:</strong> Hoang mang với DI, chỉ copy-paste
+                tutorial
+              </li>
+              <li>
+                <strong>Tháng 2:</strong> Hiểu @Component, @Service, @Repository
+              </li>
+              <li><strong>Tháng 3:</strong> Làm được REST API đơn giản</li>
+              <li><strong>Tháng 4:</strong> Connect database, làm CRUD</li>
+              <li>
+                <strong>Tháng 5:</strong> Security, JWT, role-based
+                authorization
+              </li>
+              <li>
+                <strong>Tháng 6:</strong> Deploy lên cloud, cảm thấy "mình đã
+                khá"
+              </li>
+            </ul>
+
+            <h2>Những resource học Spring hay nhất</h2>
+            <ul>
+              <li>
+                <strong>Spring.io Guides:</strong> Official tutorial, ngắn gọn
+                súc tích
+              </li>
+              <li>
+                <strong>Baeldung:</strong> Giải thích chi tiết, ví dụ thực tế
+              </li>
+              <li>
+                <strong>YouTube - Java Brains:</strong> Giảng hay, dễ hiểu
+              </li>
+              <li><strong>GitHub projects:</strong> Clone về và chạy thử</li>
+            </ul>
+
+            <h2>Lời khuyên cho bạn sắp học Spring</h2>
+            <ul>
+              <li>
+                <strong>Nắm vững Java core:</strong> OOP, Collection, Exception
+                handling
+              </li>
+              <li>
+                <strong>Học từ từ:</strong> Core Spring trước, Spring Boot sau
+              </li>
+              <li>
+                <strong>Thực hành ngay:</strong> Mỗi concept học xong là code
+                luôn
+              </li>
+              <li>
+                <strong>Đọc documentation:</strong> Spring docs viết rất tốt
+              </li>
+              <li>
+                <strong>Join cộng đồng:</strong> Spring VN Facebook group rất
+                active
+              </li>
+            </ul>
+
+            <h2>Kết luận</h2>
+            <p>
+              Spring khó ở chỗ concept, không phải syntax. Một khi hiểu được DI
+              và IoC, mọi thứ sẽ sáng tỏ. Giờ tôi không thể tưởng tượng làm Java
+              mà không có Spring. Nó đã thay đổi hoàn toàn cách tôi tư duy về
+              architecture!
+            </p>
+
+            <div class="back-to-home"><a href="../index.html">← Về trang chủ</a></div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.7</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="rating-count">dựa trên 32 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 72%"></div>
+                  </div>
+                  <span class="bar-count">23</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 22%"></div>
+                  </div>
+                  <span class="bar-count">7</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 6%"></div>
+                  </div>
+                  <span class="bar-count">2</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>Gửi Đánh Giá</button>
+              <div class="rating-message" id="ratingMessage" style="display: none"></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">14</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input type="email" id="commentEmail" name="email" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về Spring Framework..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">Gửi Bình Luận</button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">A</div>
+                    <div class="author-info">
+                      <h5>Anh Tuấn</h5>
+                      <span class="comment-date">1 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Spring Boot thật sự revolutionary! Dependency injection và auto-configuration giúp development nhanh hơn rất nhiều. Bài viết explain rất rõ ràng!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">9</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">L</div>
+                    <div class="author-info">
+                      <h5>Lan Nguyễn</h5>
+                      <span class="comment-date">3 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Spring Security phần này mình đang học. JPA repository pattern rất tiện cho database operations. Cảm ơn bạn chia sẻ!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">6</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+                </div>
+
+    </div>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    
+    <script>
+      // Rating System
+      const stars = document.querySelectorAll(".star");
+      const submitRatingBtn = document.getElementById("submitRating");
+      const ratingMessage = document.getElementById("ratingMessage");
+      let selectedRating = 0;
+
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
+          const rating = parseInt(star.dataset.rating);
+          highlightStars(rating);
+        });
+
+        star.addEventListener("mouseout", () => {
+          highlightStars(selectedRating);
+        });
+
+        star.addEventListener("click", () => {
+          selectedRating = parseInt(star.dataset.rating);
+          highlightStars(selectedRating);
+          submitRatingBtn.disabled = false;
+        });
+      });
+
+      function highlightStars(rating) {
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add("active");
+          } else {
+            star.classList.remove("active");
+          }
+        });
+      }
+
+      submitRatingBtn.addEventListener("click", () => {
+        if (selectedRating > 0) {
+          submitRatingBtn.disabled = true;
+          submitRatingBtn.textContent = "Đang gửi...";
+
+          setTimeout(() => {
+            ratingMessage.style.display = "block";
+            ratingMessage.className = "rating-message success";
+            ratingMessage.textContent = `Cảm ơn bạn đã đánh giá ${selectedRating} sao! Đánh giá của bạn đã được ghi nhận.`;
+            submitRatingBtn.textContent = "Đã gửi";
+          }, 1000);
+        }
+      });
+
+      // Comments System
+      const commentForm = document.getElementById("commentForm");
+      const commentsList = document.querySelector(".comments-list");
+      const commentsCount = document.querySelector(".comments-count");
+
+      commentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("commentName").value;
+        const email = document.getElementById("commentEmail").value;
+        const content = document.getElementById("commentContent").value;
+
+        if (name && email && content) {
+          addComment(name, content);
+          commentForm.reset();
+        }
+      });
+
+      function addComment(name, content) {
+        const newComment = document.createElement("div");
+        newComment.className = "comment";
+
+        const avatar = name.charAt(0).toUpperCase();
+        const currentTime = "vừa xong";
+
+        newComment.innerHTML = `
+          <div class="comment-header">
+            <div class="comment-author">
+              <div class="author-avatar">${avatar}</div>
+              <div class="author-info">
+                <h5>${name}</h5>
+                <span class="comment-date">${currentTime}</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-content">
+            <p>${content}</p>
+          </div>
+          <div class="comment-actions">
+            <button class="comment-action like-btn">
+              <i class="bi bi-heart"></i>
+              <span class="like-count">0</span>
+            </button>
+            <button class="comment-action reply-btn">
+              <i class="bi bi-reply"></i>
+              Trả lời
+            </button>
+          </div>
+        `;
+
+        commentsList.insertBefore(newComment, commentsList.firstChild);
+
+        const currentCount = parseInt(commentsCount.textContent);
+        commentsCount.textContent = currentCount + 1;
+
+        const likeBtn = newComment.querySelector(".like-btn");
+        addLikeFunctionality(likeBtn);
+
+        newComment.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Like functionality
+      function addLikeFunctionality(likeBtn) {
+        likeBtn.addEventListener("click", () => {
+          const likeCount = likeBtn.querySelector(".like-count");
+          const currentLikes = parseInt(likeCount.textContent);
+          const heart = likeBtn.querySelector("i");
+
+          if (heart.classList.contains("bi-heart")) {
+            heart.classList.remove("bi-heart");
+            heart.classList.add("bi-heart-fill");
+            likeCount.textContent = currentLikes + 1;
+            likeBtn.style.color = "#e74c3c";
+          } else {
+            heart.classList.remove("bi-heart-fill");
+            heart.classList.add("bi-heart");
+            likeCount.textContent = currentLikes - 1;
+            likeBtn.style.color = "";
+          }
+        });
+      }
+
+      // Add like functionality to existing comments
+      document.querySelectorAll(".like-btn").forEach(addLikeFunctionality);
+
+      // Reply functionality
+      document.querySelectorAll(".reply-btn").forEach((replyBtn) => {
+        replyBtn.addEventListener("click", () => {
+          alert("Chức năng trả lời đang được phát triển!");
+        });
+      });
+
+      // Load more comments
+      document.querySelector(".load-more-btn").addEventListener("click", () => {
+        alert("Đã hiển thị tất cả bình luận!");
+      });
+    </script>
+  </body>
+</html>

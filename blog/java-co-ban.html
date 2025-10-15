@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Cơ Bản</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                ><span>Blog</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li>
+                  <a href="java-co-ban.html" class="active">Java Cơ Bản</a>
+                </li>
+                <li><a href="java-oop.html">Java OOP</a></li>
+                <li><a href="java-spring.html">Java Spring Framework</a></li>
+                <li><a href="java-collections.html">Java Collections</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a href="javascript-co-ban.html">JavaScript Cơ Bản</a></li>
+                <li><a href="javascript-dom.html">JavaScript DOM</a></li>
+                <li><a href="javascript-async.html">JavaScript Async</a></li>
+                <li><a href="javascript-es6.html">JavaScript ES6+</a></li>
+                <li class="dropdown-divider"></li>
+                <li><a href="java-javascript-tips.html">Java & JS Tips</a></li>
+              </ul>
+            </li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">Java</span>
+            <h1 class="blog-title">Java Cơ Bản</h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Hành trình bắt đầu với Java của tôi</h2>
+            <p>
+              Khi mới quyết định học lập trình, tôi đã rất phân vân giữa Python
+              và Java. Cuối cùng chọn Java vì nghe nói cơ hội việc làm nhiều
+              hơn. Nhưng thật sự, tuần đầu tiên học Java khiến tôi muốn bỏ cuộc!
+            </p>
+
+            <h2>Tại sao Java khó với người mới?</h2>
+            <p>
+              Lần đầu nhìn thấy
+              <code>public static void main(String[] args)</code>, tôi như bị
+              choáng. Sao phải viết dài thế này chỉ để in ra "Hello World"? So
+              với Python chỉ cần <code>print("Hello")</code> thì Java phức tạp
+              quá!
+            </p>
+            <ul>
+              <li>
+                <strong>Cú pháp dài dòng:</strong> Mọi thứ đều phải khai báo
+                kiểu dữ liệu
+              </li>
+              <li>
+                <strong>Quá nhiều khái niệm:</strong> Class, object, method,
+                static... choáng ngợp
+              </li>
+              <li>
+                <strong>Lỗi compile:</strong> Viết sai một chút là báo lỗi đỏ
+                lòm
+              </li>
+              <li>
+                <strong>IDE phức tạp:</strong> Eclipse, IntelliJ nhìn đã thấy sợ
+              </li>
+            </ul>
+
+            <h2>Bước ngoặt trong quá trình học</h2>
+            <p>
+              Tuần thứ 3, tôi gần như muốn bỏ cuộc. Nhưng anh mentor bảo: "Cứ
+              viết 1 chương trình nhỏ mỗi ngày, từ từ sẽ quen". Tôi bắt đầu viết
+              những chương trình siêu đơn giản:
+            </p>
+            <ul>
+              <li>Ngày 1: In ra tên tuổi</li>
+              <li>Ngày 3: Máy tính cộng trừ</li>
+              <li>Ngày 7: Đoán số từ 1-10</li>
+              <li>Ngày 14: Quản lý danh sách bạn bè đơn giản</li>
+            </ul>
+
+            <h2>Những sai lầm tôi đã mắc phải</h2>
+            <p>Nhìn lại, tôi đã mắc rất nhiều sai lầm ngớ ngẩn:</p>
+            <ul>
+              <li>
+                <strong>Học quá nhanh:</strong> Đọc xong lý thuyết là nhảy sang
+                chương tiếp theo
+              </li>
+              <li>
+                <strong>Không debug:</strong> Gặp lỗi là copy-paste từ
+                StackOverflow
+              </li>
+              <li>
+                <strong>Bỏ qua cơ bản:</strong> Muốn học Spring Boot ngay mà
+                chưa hiểu OOP
+              </li>
+              <li>
+                <strong>Không thực hành:</strong> Chỉ xem video mà không tự viết
+                code
+              </li>
+            </ul>
+
+            <h2>Lời khuyên cho bạn mới bắt đầu</h2>
+            <p>
+              Sau 6 tháng vật lộn với Java, đây là những điều tôi muốn nói với
+              người mới bắt đầu:
+            </p>
+            <ul>
+              <li>
+                <strong>Kiên nhẫn:</strong> Java khó hơn Python nhưng nền tảng
+                vững chắc hơn
+              </li>
+              <li>
+                <strong>Thực hành nhiều:</strong> Mỗi ngày ít nhất 1 giờ code,
+                không chỉ xem video
+              </li>
+              <li>
+                <strong>Bắt đầu từ nhỏ:</strong> Viết chương trình đơn giản
+                trước, từ từ làm phức tạp
+              </li>
+              <li>
+                <strong>Đừng ngại hỏi:</strong> Join group Facebook/Discord để
+                được support
+              </li>
+              <li>
+                <strong>Hiểu lỗi:</strong> Đọc error message thay vì copy-paste
+                solution
+              </li>
+            </ul>
+
+            <h2>Kết luận sau 6 tháng học Java</h2>
+            <p>
+              Giờ tôi đã có thể tự tin làm các project nhỏ với Java. Dù ban đầu
+              khó khăn, nhưng Java đã cho tôi nền tảng tư duy lập trình vững
+              chắc. Nếu bạn đang học Java và cảm thấy khó, đừng bỏ cuộc - tôi đã
+              từng ở vị trí đó!
+            </p>
+
+            <div class="back-to-home">
+              <a href="../index.html">← Về Trang Chủ</a>
+            </div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.5</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="rating-count">dựa trên 23 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 65%"></div>
+                  </div>
+                  <span class="bar-count">15</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 26%"></div>
+                  </div>
+                  <span class="bar-count">6</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 9%"></div>
+                  </div>
+                  <span class="bar-count">2</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>
+                Gửi Đánh Giá
+              </button>
+              <div
+                class="rating-message"
+                id="ratingMessage"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">12</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="commentEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">
+                  Gửi Bình Luận
+                </button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">M</div>
+                    <div class="author-info">
+                      <h5>Minh Trần</h5>
+                      <span class="comment-date">2 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Bài viết rất hay và thực tế! Mình cũng đã trải qua giai đoạn
+                    "khó khăn" đầu tiên khi học Java. Cảm ơn bạn đã chia sẻ
+                    những kinh nghiệm quý báu này. Đặc biệt là phần về việc thực
+                    hành mỗi ngày, điều này thật sự quan trọng.
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">8</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">L</div>
+                    <div class="author-info">
+                      <h5>Linh Nguyễn</h5>
+                      <span class="comment-date">1 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Mình đang học Java và cảm thấy rất khó khăn với các concept
+                    như OOP. Bài viết của bạn cho mình thêm động lực để tiếp
+                    tục. Bạn có thể chia sẻ thêm về cách học OOP hiệu quả không?
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">5</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+
+                <!-- Reply -->
+                <div class="comment-reply">
+                  <div class="comment">
+                    <div class="comment-header">
+                      <div class="comment-author">
+                        <div class="author-avatar">D</div>
+                        <div class="author-info">
+                          <h5>Nguyễn Tiến Dũng</h5>
+                          <span class="comment-date">1 ngày trước</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-content">
+                      <p>
+                        Cảm ơn bạn đã đọc bài! Mình sẽ viết một bài chi tiết về
+                        Java OOP trong thời gian tới. Khuyên bạn nên bắt đầu với
+                        những ví dụ thực tế như tạo class Student, Car... để dễ
+                        hình dung hơn.
+                      </p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="comment-action like-btn">
+                        <i class="bi bi-heart"></i>
+                        <span class="like-count">3</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sample Comment 3 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">H</div>
+                    <div class="author-info">
+                      <h5>Hoàng Vũ</h5>
+                      <span class="comment-date">3 giờ trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Blog của bạn rất chất lượng! Mình vừa bookmark lại để đọc
+                    các bài khác. Phong cách viết dễ hiểu và gần gũi, không quá
+                    academic. Keep up the good work! 👍
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">12</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Rating & Comments JavaScript -->
+    <script>
+      // Rating System
+      const stars = document.querySelectorAll(".star");
+      const submitRatingBtn = document.getElementById("submitRating");
+      const ratingMessage = document.getElementById("ratingMessage");
+      let selectedRating = 0;
+
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
+          const rating = parseInt(star.dataset.rating);
+          highlightStars(rating);
+        });
+
+        star.addEventListener("mouseout", () => {
+          highlightStars(selectedRating);
+        });
+
+        star.addEventListener("click", () => {
+          selectedRating = parseInt(star.dataset.rating);
+          highlightStars(selectedRating);
+          submitRatingBtn.disabled = false;
+        });
+      });
+
+      function highlightStars(rating) {
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add("active");
+          } else {
+            star.classList.remove("active");
+          }
+        });
+      }
+
+      submitRatingBtn.addEventListener("click", () => {
+        if (selectedRating > 0) {
+          // Simulate API call
+          submitRatingBtn.disabled = true;
+          submitRatingBtn.textContent = "Đang gửi...";
+
+          setTimeout(() => {
+            ratingMessage.style.display = "block";
+            ratingMessage.className = "rating-message success";
+            ratingMessage.textContent = `Cảm ơn bạn đã đánh giá ${selectedRating} sao! Đánh giá của bạn đã được ghi nhận.`;
+            submitRatingBtn.textContent = "Đã gửi";
+          }, 1000);
+        }
+      });
+
+      // Comments System
+      const commentForm = document.getElementById("commentForm");
+      const commentsList = document.querySelector(".comments-list");
+      const commentsCount = document.querySelector(".comments-count");
+
+      commentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("commentName").value;
+        const email = document.getElementById("commentEmail").value;
+        const content = document.getElementById("commentContent").value;
+
+        if (name && email && content) {
+          addComment(name, content);
+          commentForm.reset();
+        }
+      });
+
+      function addComment(name, content) {
+        const newComment = document.createElement("div");
+        newComment.className = "comment";
+
+        const avatar = name.charAt(0).toUpperCase();
+        const currentTime = "vừa xong";
+
+        newComment.innerHTML = `
+          <div class="comment-header">
+            <div class="comment-author">
+              <div class="author-avatar">${avatar}</div>
+              <div class="author-info">
+                <h5>${name}</h5>
+                <span class="comment-date">${currentTime}</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-content">
+            <p>${content}</p>
+          </div>
+          <div class="comment-actions">
+            <button class="comment-action like-btn">
+              <i class="bi bi-heart"></i>
+              <span class="like-count">0</span>
+            </button>
+            <button class="comment-action reply-btn">
+              <i class="bi bi-reply"></i>
+              Trả lời
+            </button>
+          </div>
+        `;
+
+        // Insert at the beginning of comments list
+        commentsList.insertBefore(newComment, commentsList.firstChild);
+
+        // Update comments count
+        const currentCount = parseInt(commentsCount.textContent);
+        commentsCount.textContent = currentCount + 1;
+
+        // Add like functionality to new comment
+        const likeBtn = newComment.querySelector(".like-btn");
+        addLikeFunctionality(likeBtn);
+
+        // Scroll to new comment
+        newComment.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Like functionality
+      function addLikeFunctionality(likeBtn) {
+        likeBtn.addEventListener("click", () => {
+          const likeCount = likeBtn.querySelector(".like-count");
+          const currentLikes = parseInt(likeCount.textContent);
+          const heart = likeBtn.querySelector("i");
+
+          if (heart.classList.contains("bi-heart")) {
+            heart.classList.remove("bi-heart");
+            heart.classList.add("bi-heart-fill");
+            likeCount.textContent = currentLikes + 1;
+            likeBtn.style.color = "#e74c3c";
+          } else {
+            heart.classList.remove("bi-heart-fill");
+            heart.classList.add("bi-heart");
+            likeCount.textContent = currentLikes - 1;
+            likeBtn.style.color = "";
+          }
+        });
+      }
+
+      // Add like functionality to existing comments
+      document.querySelectorAll(".like-btn").forEach(addLikeFunctionality);
+
+      // Reply functionality
+      document.querySelectorAll(".reply-btn").forEach((replyBtn) => {
+        replyBtn.addEventListener("click", () => {
+          alert("Chức năng trả lời đang được phát triển!");
+        });
+      });
+
+      // Load more comments
+      document.querySelector(".load-more-btn").addEventListener("click", () => {
+        alert("Đã hiển thị tất cả bình luận!");
+      });
+    </script>
+  </body>
+</html>

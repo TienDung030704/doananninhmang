@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript ES6+</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                ><span>Blog</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="java-co-ban.html">Java Cơ Bản</a></li>
+                <li><a href="java-oop.html">Java OOP</a></li>
+                <li><a href="java-spring.html">Java Spring Framework</a></li>
+                <li><a href="java-collections.html">Java Collections</a></li>
+                <li><a href="javascript-co-ban.html">JavaScript Cơ Bản</a></li>
+                <li><a href="javascript-dom.html">JavaScript DOM</a></li>
+                <li><a href="javascript-async.html">JavaScript Async</a></li>
+                <li>
+                  <a href="javascript-es6.html" class="active"
+                    >JavaScript ES6+</a
+                  >
+                </li>
+                <li>
+                  <a href="java-javascript-tips.html">Java & JavaScript Tips</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">JavaScript</span>
+            <h1 class="blog-title">JavaScript ES6+ - Cuộc Cách Mạng Syntax</h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>ES6 - JavaScript "reborn"</h2>
+            <p>
+              2015 - năm ES6 ra đời là turning point! Từ JavaScript "ugly" thành
+              modern language. Arrow functions, template literals,
+              destructuring... Cảm giác như học ngôn ngữ mới! Backward
+              compatibility vẫn giữ, nhưng syntax hoàn toàn khác!
+            </p>
+
+            <h2>Arrow Functions - Love at first sight</h2>
+            <p>
+              Từ function(x){return x*2} thành x=>x*2. Concise, lexical this
+              binding, perfect cho array methods! Tôi addicted với arrow
+              functions, viết function declaration ít hơn 90%!
+            </p>
+
+            <h2>Template Literals - Goodbye string concatenation</h2>
+            <p>
+              Không còn 'Hello ' + name + '!' nữa! Template literals với ${}
+              syntax elegant hơn nhiều. Multi-line strings, expression embedding
+              - gamechange cho string manipulation!
+            </p>
+
+            <h2>Destructuring - Unpacking made easy</h2>
+            <p>
+              Array/object destructuring là magic! const [a,b] = arr; const
+              {name, age} = obj; Default values, rest operator, nested
+              destructuring... Syntax sugar nhưng improve readability
+              dramatically!
+            </p>
+
+            <h2>Let & Const - Block scope finally!</h2>
+            <p>
+              Var hoisting và function scope confusing! Let/const với block
+              scope logical hơn. Const cho immutable references, let cho
+              mutable. Temporal dead zone concept mới nhưng make sense!
+            </p>
+
+            <h2>Spread & Rest - Three dots magic</h2>
+            <ul>
+              <li><strong>Spread:</strong> [...array] expand elements</li>
+              <li>
+                <strong>Rest:</strong> function(...args) collect arguments
+              </li>
+              <li>
+                <strong>Object spread:</strong> {...obj} clone/merge objects
+              </li>
+              <li><strong>Array operations:</strong> Thay thế concat, slice</li>
+            </ul>
+
+            <h2>Classes - Syntactic sugar cho prototypes</h2>
+            <p>
+              JavaScript finally có class syntax! Constructor, methods,
+              inheritance với extends/super. Dù chỉ là syntactic sugar cho
+              prototypes, nhưng familiar hơn cho devs từ OOP background!
+            </p>
+
+            <h2>Modules - Import/Export revolution</h2>
+            <p>
+              ES6 modules end era of script tags và global variables!
+              Import/export syntax clean, static analysis possible, tree-shaking
+              enabled. Module system modern như Python/Java!
+            </p>
+
+            <h2>Promises & Async/Await integration</h2>
+            <p>
+              ES6 Promises + ES2017 async/await = async programming paradise!
+              Callback hell solved, error handling improved, readable async code
+              finally possible!
+            </p>
+
+            <h2>ES2017+ features tôi yêu thích</h2>
+            <ul>
+              <li>
+                <strong>Object.entries/values():</strong> Object iteration
+                easier
+              </li>
+              <li><strong>Array.includes():</strong> Cleaner than indexOf</li>
+              <li><strong>String padding:</strong> padStart/padEnd methods</li>
+              <li><strong>Optional chaining:</strong> obj?.prop?.method?.()</li>
+              <li><strong>Nullish coalescing:</strong> ?? operator</li>
+            </ul>
+
+            <h2>ES2020+ modern features</h2>
+            <ul>
+              <li><strong>BigInt:</strong> Large integer support</li>
+              <li><strong>Dynamic imports:</strong> import() function</li>
+              <li><strong>Private fields:</strong> #private properties</li>
+              <li>
+                <strong>Top-level await:</strong> Await outside async function
+              </li>
+            </ul>
+
+            <h2>Babel - ES6+ everywhere</h2>
+            <p>
+              Browser support chậm, Babel giải cứu! Transpile ES6+ về ES5, use
+              modern syntax ngay. Babel preset-env intelligent, polyfills
+              automatic. Development experience improved dramatically!
+            </p>
+
+            <h2>Performance impacts</h2>
+            <p>
+              ES6+ features performance implications! Arrow functions vs regular
+              functions, for...of vs traditional loops, destructuring overhead.
+              Profile code để understand trade-offs!
+            </p>
+
+            <h2>Migration strategies</h2>
+            <ul>
+              <li><strong>Progressive adoption:</strong> Feature by feature</li>
+              <li><strong>ESLint rules:</strong> Enforce modern syntax</li>
+              <li><strong>Team training:</strong> Share knowledge</li>
+              <li><strong>Code reviews:</strong> Modernize legacy code</li>
+            </ul>
+
+            <h2>Common ES6+ mistakes</h2>
+            <ul>
+              <li>
+                <strong>Arrow functions everywhere:</strong> Methods need this
+                binding
+              </li>
+              <li>
+                <strong>Destructuring abuse:</strong> Readability vs brevity
+              </li>
+              <li>
+                <strong>Const misconception:</strong> Immutable reference, not
+                value
+              </li>
+              <li>
+                <strong>Class over-engineering:</strong> Simple objects
+                sufficient
+              </li>
+            </ul>
+
+            <h2>Kết luận</h2>
+            <p>
+              ES6+ transformed JavaScript từ "toy language" thành
+              enterprise-ready language! Modern syntax, powerful features,
+              better developer experience. Continuous evolution với yearly
+              releases - JavaScript exciting hơn bao giờ hết!
+            </p>
+
+            <div class="back-to-home"><a href="../index.html">← Về trang chủ</a></div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.7</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="rating-count">dựa trên 42 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 74%"></div>
+                  </div>
+                  <span class="bar-count">31</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 21%"></div>
+                  </div>
+                  <span class="bar-count">9</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 5%"></div>
+                  </div>
+                  <span class="bar-count">2</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>
+                Gửi Đánh Giá
+              </button>
+              <div
+                class="rating-message"
+                id="ratingMessage"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">28</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="commentEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">
+                  Gửi Bình Luận
+                </button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">A</div>
+                    <div class="author-info">
+                      <h5>Anh Tuấn</h5>
+                      <span class="comment-date">1 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    ES6+ thật sự thay đổi cách mình code JavaScript! Arrow
+                    function và destructuring làm code ngắn gọn và dễ đọc hơn
+                    rất nhiều.
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">15</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">L</div>
+                    <div class="author-info">
+                      <h5>Linh Nguyen</h5>
+                      <span class="comment-date">3 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Template literals và async/await examples rất thực tế. Mình
+                    đã refactor lại một số function cũ và performance cải thiện
+                    rõ rệt!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">11</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+      // Rating System
+      const stars = document.querySelectorAll(".star");
+      const submitRatingBtn = document.getElementById("submitRating");
+      const ratingMessage = document.getElementById("ratingMessage");
+      let selectedRating = 0;
+
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
+          const rating = parseInt(star.dataset.rating);
+          highlightStars(rating);
+        });
+
+        star.addEventListener("mouseout", () => {
+          highlightStars(selectedRating);
+        });
+
+        star.addEventListener("click", () => {
+          selectedRating = parseInt(star.dataset.rating);
+          highlightStars(selectedRating);
+          submitRatingBtn.disabled = false;
+        });
+      });
+
+      function highlightStars(rating) {
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add("active");
+          } else {
+            star.classList.remove("active");
+          }
+        });
+      }
+
+      submitRatingBtn.addEventListener("click", () => {
+        if (selectedRating > 0) {
+          submitRatingBtn.disabled = true;
+          submitRatingBtn.textContent = "Đang gửi...";
+
+          setTimeout(() => {
+            ratingMessage.style.display = "block";
+            ratingMessage.className = "rating-message success";
+            ratingMessage.textContent = `Cảm ơn bạn đã đánh giá ${selectedRating} sao! Đánh giá của bạn đã được ghi nhận.`;
+            submitRatingBtn.textContent = "Đã gửi";
+          }, 1000);
+        }
+      });
+
+      // Comments System
+      const commentForm = document.getElementById("commentForm");
+      const commentsList = document.querySelector(".comments-list");
+      const commentsCount = document.querySelector(".comments-count");
+
+      commentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("commentName").value;
+        const email = document.getElementById("commentEmail").value;
+        const content = document.getElementById("commentContent").value;
+
+        if (name && email && content) {
+          addComment(name, content);
+          commentForm.reset();
+        }
+      });
+
+      function addComment(name, content) {
+        const newComment = document.createElement("div");
+        newComment.className = "comment";
+
+        const avatar = name.charAt(0).toUpperCase();
+        const currentTime = "vừa xong";
+
+        newComment.innerHTML = `
+          <div class="comment-header">
+            <div class="comment-author">
+              <div class="author-avatar">${avatar}</div>
+              <div class="author-info">
+                <h5>${name}</h5>
+                <span class="comment-date">${currentTime}</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-content">
+            <p>${content}</p>
+          </div>
+          <div class="comment-actions">
+            <button class="comment-action like-btn">
+              <i class="bi bi-heart"></i>
+              <span class="like-count">0</span>
+            </button>
+            <button class="comment-action reply-btn">
+              <i class="bi bi-reply"></i>
+              Trả lời
+            </button>
+          </div>
+        `;
+
+        commentsList.insertBefore(newComment, commentsList.firstChild);
+
+        const currentCount = parseInt(commentsCount.textContent);
+        commentsCount.textContent = currentCount + 1;
+
+        const likeBtn = newComment.querySelector(".like-btn");
+        addLikeFunctionality(likeBtn);
+
+        newComment.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Like functionality
+      function addLikeFunctionality(likeBtn) {
+        likeBtn.addEventListener("click", () => {
+          const likeCount = likeBtn.querySelector(".like-count");
+          const currentLikes = parseInt(likeCount.textContent);
+          const heart = likeBtn.querySelector("i");
+
+          if (heart.classList.contains("bi-heart")) {
+            heart.classList.remove("bi-heart");
+            heart.classList.add("bi-heart-fill");
+            likeCount.textContent = currentLikes + 1;
+            likeBtn.style.color = "#e74c3c";
+          } else {
+            heart.classList.remove("bi-heart-fill");
+            heart.classList.add("bi-heart");
+            likeCount.textContent = currentLikes - 1;
+            likeBtn.style.color = "";
+          }
+        });
+      }
+
+      // Add like functionality to existing comments
+      document.querySelectorAll(".like-btn").forEach(addLikeFunctionality);
+
+      // Reply functionality
+      document.querySelectorAll(".reply-btn").forEach((replyBtn) => {
+        replyBtn.addEventListener("click", () => {
+          alert("Chức năng trả lời đang được phát triển!");
+        });
+      });
+
+      // Load more comments
+      document.querySelector(".load-more-btn").addEventListener("click", () => {
+        alert("Đã hiển thị tất cả bình luận!");
+      });
+    </script>
+  </body>
+</html>

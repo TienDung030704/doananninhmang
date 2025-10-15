@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java OOP</title>
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/blog.css" rel="stylesheet" />
+    <link href="../assets/css/rating-comments.css" rel="stylesheet" />
+  </head>
+  <body class="blog-page">
+    <header
+      id="header"
+      class="header d-flex align-items-center light-background sticky-top"
+    >
+      <div
+        class="container position-relative d-flex align-items-center justify-content-between"
+      >
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html">Trang Chủ</a></li>
+            <li><a href="../about.html">Giới Thiệu</a></li>
+            <li><a href="../resume.html">Hồ Sơ</a></li>
+            <li><a href="../portfolio.html">Dự Án</a></li>
+            <li class="dropdown">
+              <a href="#" class="active"
+                ><span>Blog</span>
+                <i class="bi bi-chevron-down toggle-dropdown"></i
+              ></a>
+              <ul>
+                <li><a href="java-co-ban.html">Java Cơ Bản</a></li>
+                <li><a href="java-oop.html" class="active">Java OOP</a></li>
+                <li><a href="java-spring.html">Java Spring Framework</a></li>
+                <li><a href="java-collections.html">Java Collections</a></li>
+                <li><a href="javascript-co-ban.html">JavaScript Cơ Bản</a></li>
+                <li><a href="javascript-dom.html">JavaScript DOM</a></li>
+                <li><a href="javascript-async.html">JavaScript Async</a></li>
+                <li><a href="javascript-es6.html">JavaScript ES6+</a></li>
+                <li>
+                  <a href="java-javascript-tips.html">Java & JavaScript Tips</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="../contact.html">Liên Hệ</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+    </header>
+
+    <div class="blog-post">
+      <div class="container">
+        <div class="blog-article">
+          <div class="blog-header">
+            <span class="blog-category">Java</span>
+            <h1 class="blog-title">Java OOP - Từ Hoang Mang Đến Hiểu Rõ</h1>
+            <div class="blog-meta">
+              <span>6 tháng 10, 2025</span>
+              <span>Nguyễn Tiến Dũng</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <h2>Nỗi ám ảnh tên OOP</h2>
+            <p>
+              Khi mới học Java được 2 tuần, tôi gặp khái niệm "OOP" và cảm giác
+              như bị ném vào một mê cung khổng lồ. Class, Object, Inheritance,
+              Polymorphism... Mọi thứ nghe có vẻ cao siêu nhưng tôi chẳng hiểu
+              gì cả!
+            </p>
+
+            <h2>Lần đầu tiên "vỡ lòng" với Class và Object</h2>
+            <p>
+              Mentor bảo tôi hãy tưởng tượng Class như bản thiết kế của một ngôi
+              nhà, còn Object là ngôi nhà thực tế được xây theo bản thiết kế đó.
+              Ban đầu tôi cứ nghĩ: "Tại sao không viết thẳng code luôn mà phải
+              tạo Class làm gì?"
+            </p>
+            <ul>
+              <li>
+                <strong>Tuần 1:</strong> Viết class Student đơn giản với name và
+                age
+              </li>
+              <li>
+                <strong>Tuần 2:</strong> Thêm method study() và displayInfo()
+              </li>
+              <li>
+                <strong>Tuần 3:</strong> Tạo nhiều student objects và bắt đầu
+                thấy lợi ích
+              </li>
+              <li>
+                <strong>Tuần 4:</strong> "A ha!" moment - hiểu tại sao cần Class
+              </li>
+            </ul>
+
+            <h2>Encapsulation - Bài học từ sai lầm</h2>
+            <p>
+              Tôi từng để tất cả biến là public và không hiểu tại sao cần
+              private/protected. Cho đến khi làm project quản lý sinh viên và ai
+              cũng có thể thay đổi điểm số tùy ý, tôi mới hiểu giá trị của việc
+              "đóng gói" dữ liệu!
+            </p>
+
+            <h2>Inheritance - Khi code không còn lặp lại</h2>
+            <p>
+              Lúc đầu tôi copy-paste code giống nhau cho các class Person,
+              Student, Teacher. Đến khi học Inheritance, tôi như được giải
+              thoát! Tạo class cha Person, các class con inherit và chỉ cần thêm
+              những gì đặc biệt.
+            </p>
+
+            <h2>Polymorphism - Cái tên nghe đáng sợ nhất</h2>
+            <p>
+              Polymorphism nghe có vẻ kinh khủng, nhưng thực ra chỉ là "nhiều
+              hình dạng". Cùng một method draw() nhưng Circle.draw() khác với
+              Rectangle.draw(). Hiểu được điều này mất 3 tuần đập đầu vào bàn!
+            </p>
+
+            <h2>Những sai lầm kinh điển của tôi</h2>
+            <ul>
+              <li>
+                <strong>Tạo quá nhiều getter/setter:</strong> Cứ tưởng phải có
+                getter/setter cho mọi field
+              </li>
+              <li>
+                <strong>Inheritance lạm dụng:</strong> Cố nhồi nhét mọi thứ vào
+                inheritance dù không cần
+              </li>
+              <li>
+                <strong>Không hiểu static:</strong> Dùng static method cho mọi
+                thứ vì "tiện"
+              </li>
+              <li>
+                <strong>Quên this keyword:</strong> Rối loạn giữa parameter và
+                instance variable
+              </li>
+            </ul>
+
+            <h2>Tips học OOP hiệu quả từ kinh nghiệm</h2>
+            <ul>
+              <li>
+                <strong>Bắt đầu từ ví dụ thực tế:</strong> Car, Person, Animal
+                dễ hình dung hơn
+              </li>
+              <li>
+                <strong>Vẽ sơ đồ:</strong> UML diagram giúp visualize
+                relationship
+              </li>
+              <li>
+                <strong>Code từ từ:</strong> Đừng cố nhồi nhét hết 4 tính chất
+                vào 1 bài
+              </li>
+              <li>
+                <strong>Refactor code cũ:</strong> Lấy code procedural cũ và
+                chuyển sang OOP
+              </li>
+              <li>
+                <strong>Thực hành nhiều:</strong> Làm project quản lý library,
+                zoo, school
+              </li>
+            </ul>
+
+            <h2>Kết luận sau 3 tháng vật lộn với OOP</h2>
+            <p>
+              OOP không phải cái gì đó xa xỉ chỉ dành cho "cao thủ". Nó chỉ là
+              cách tổ chức code sao cho dễ hiểu, dễ maintain và dễ mở rộng. Hành
+              trình từ "OOP là cái gì?" đến "A, OOP thật tuyệt!" của tôi mất 3
+              tháng. Bạn có thể nhanh hơn!
+            </p>
+
+            <div class="back-to-home">
+              <a href="../index.html">← Về Trang Chủ</a>
+            </div>
+          </div>
+
+          <!-- Rating Section -->
+          <div class="rating-section">
+            <div class="rating-header">
+              <h3>Đánh Giá Bài Viết</h3>
+              <p>Bài viết này có hữu ích với bạn không?</p>
+            </div>
+
+            <div class="rating-stats">
+              <div class="average-rating">
+                <div class="rating-number">4.4</div>
+                <div class="rating-stars-display">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i>
+                </div>
+                <div class="rating-count">dựa trên 19 đánh giá</div>
+              </div>
+
+              <div class="rating-bars">
+                <div class="rating-bar">
+                  <span class="star-label">5★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 63%"></div>
+                  </div>
+                  <span class="bar-count">12</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">4★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 21%"></div>
+                  </div>
+                  <span class="bar-count">4</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">3★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 16%"></div>
+                  </div>
+                  <span class="bar-count">3</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">2★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+                <div class="rating-bar">
+                  <span class="star-label">1★</span>
+                  <div class="bar-container">
+                    <div class="bar-fill" style="width: 0%"></div>
+                  </div>
+                  <span class="bar-count">0</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="rate-article">
+              <h4>Đánh giá bài viết này</h4>
+              <div class="star-rating" id="userRating">
+                <span class="star" data-rating="1">★</span>
+                <span class="star" data-rating="2">★</span>
+                <span class="star" data-rating="3">★</span>
+                <span class="star" data-rating="4">★</span>
+                <span class="star" data-rating="5">★</span>
+              </div>
+              <button class="rate-button" id="submitRating" disabled>
+                Gửi Đánh Giá
+              </button>
+              <div
+                class="rating-message"
+                id="ratingMessage"
+                style="display: none"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Comments Section -->
+          <div class="comments-section">
+            <div class="comments-header">
+              <h3>
+                <i class="bi bi-chat-dots"></i>
+                Bình Luận
+                <span class="comments-count">14</span>
+              </h3>
+              <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+            </div>
+
+            <!-- Comment Form -->
+            <div class="comment-form">
+              <h4>Để lại bình luận</h4>
+              <form id="commentForm">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="commentName">Họ Tên *</label>
+                    <input type="text" id="commentName" name="name" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="commentEmail">Email *</label>
+                    <input
+                      type="email"
+                      id="commentEmail"
+                      name="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="commentContent">Bình Luận *</label>
+                  <textarea
+                    id="commentContent"
+                    name="content"
+                    placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-comment">
+                  Gửi Bình Luận
+                </button>
+              </form>
+            </div>
+
+            <!-- Comments List -->
+            <div class="comments-list">
+              <!-- Sample Comment 1 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">K</div>
+                    <div class="author-info">
+                      <h5>Khang Lê</h5>
+                      <span class="comment-date">2 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Bài viết giải thích OOP rất dễ hiểu! Mình đã struggle với
+                    khái niệm inheritance và polymorphism khá lâu. Ví dụ về
+                    Animal/Dog/Cat thực sự giúp mình hình dung được cách OOP
+                    hoạt động.
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">11</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sample Comment 2 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">V</div>
+                    <div class="author-info">
+                      <h5>Văn Minh</h5>
+                      <span class="comment-date">1 ngày trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Encapsulation và Abstraction từ trước tới giờ mình vẫn hay
+                    bị confused. Cảm ơn bạn đã phân biệt rõ ràng giữa 2 concept
+                    này. UML diagram suggestion cũng rất hay!
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">8</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+
+                <!-- Reply -->
+                <div class="comment-reply">
+                  <div class="comment">
+                    <div class="comment-header">
+                      <div class="comment-author">
+                        <div class="author-avatar">D</div>
+                        <div class="author-info">
+                          <h5>Nguyễn Tiến Dũng</h5>
+                          <span class="comment-date">1 ngày trước</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="comment-content">
+                      <p>
+                        Glad to help! Encapsulation focuses on DATA hiding
+                        (private variables), Abstraction focuses on COMPLEXITY
+                        hiding (abstract classes/interfaces). Cả hai đều quan
+                        trọng trong OOP design.
+                      </p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="comment-action like-btn">
+                        <i class="bi bi-heart"></i>
+                        <span class="like-count">6</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sample Comment 3 -->
+              <div class="comment">
+                <div class="comment-header">
+                  <div class="comment-author">
+                    <div class="author-avatar">H</div>
+                    <div class="author-info">
+                      <h5>Hải Đăng</h5>
+                      <span class="comment-date">4 giờ trước</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>
+                    Project Library Management suggestion rất practical! Mình sẽ
+                    thử implement để practice OOP concepts. Có thể bạn chia sẻ
+                    thêm về Design Patterns không?
+                  </p>
+                </div>
+                <div class="comment-actions">
+                  <button class="comment-action like-btn">
+                    <i class="bi bi-heart"></i>
+                    <span class="like-count">5</span>
+                  </button>
+                  <button class="comment-action reply-btn">
+                    <i class="bi bi-reply"></i>
+                    Trả lời
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Load More Comments -->
+            <div class="load-more-comments">
+              <button class="load-more-btn">Xem Thêm Bình Luận</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer" class="footer light-background">
+      <div class="container">
+        <div class="copyright text-center">
+          <p>
+            © <span>Copyright</span>
+            <strong class="px-1 sitename">Nguyễn Tiến Dũng</strong>
+            <span>All Rights Reserved</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <!-- Rating & Comments JavaScript -->
+    <script>
+      // Rating System
+      const stars = document.querySelectorAll(".star");
+      const submitRatingBtn = document.getElementById("submitRating");
+      const ratingMessage = document.getElementById("ratingMessage");
+      let selectedRating = 0;
+
+      stars.forEach((star) => {
+        star.addEventListener("mouseover", () => {
+          const rating = parseInt(star.dataset.rating);
+          highlightStars(rating);
+        });
+
+        star.addEventListener("mouseout", () => {
+          highlightStars(selectedRating);
+        });
+
+        star.addEventListener("click", () => {
+          selectedRating = parseInt(star.dataset.rating);
+          highlightStars(selectedRating);
+          submitRatingBtn.disabled = false;
+        });
+      });
+
+      function highlightStars(rating) {
+        stars.forEach((star, index) => {
+          if (index < rating) {
+            star.classList.add("active");
+          } else {
+            star.classList.remove("active");
+          }
+        });
+      }
+
+      submitRatingBtn.addEventListener("click", () => {
+        if (selectedRating > 0) {
+          submitRatingBtn.disabled = true;
+          submitRatingBtn.textContent = "Đang gửi...";
+
+          setTimeout(() => {
+            ratingMessage.style.display = "block";
+            ratingMessage.className = "rating-message success";
+            ratingMessage.textContent = `Cảm ơn bạn đã đánh giá ${selectedRating} sao! Đánh giá của bạn đã được ghi nhận.`;
+            submitRatingBtn.textContent = "Đã gửi";
+          }, 1000);
+        }
+      });
+
+      // Comments System
+      const commentForm = document.getElementById("commentForm");
+      const commentsList = document.querySelector(".comments-list");
+      const commentsCount = document.querySelector(".comments-count");
+
+      commentForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("commentName").value;
+        const email = document.getElementById("commentEmail").value;
+        const content = document.getElementById("commentContent").value;
+
+        if (name && email && content) {
+          addComment(name, content);
+          commentForm.reset();
+        }
+      });
+
+      function addComment(name, content) {
+        const newComment = document.createElement("div");
+        newComment.className = "comment";
+
+        const avatar = name.charAt(0).toUpperCase();
+        const currentTime = "vừa xong";
+
+        newComment.innerHTML = `
+          <div class="comment-header">
+            <div class="comment-author">
+              <div class="author-avatar">${avatar}</div>
+              <div class="author-info">
+                <h5>${name}</h5>
+                <span class="comment-date">${currentTime}</span>
+              </div>
+            </div>
+          </div>
+          <div class="comment-content">
+            <p>${content}</p>
+          </div>
+          <div class="comment-actions">
+            <button class="comment-action like-btn">
+              <i class="bi bi-heart"></i>
+              <span class="like-count">0</span>
+            </button>
+            <button class="comment-action reply-btn">
+              <i class="bi bi-reply"></i>
+              Trả lời
+            </button>
+          </div>
+        `;
+
+        commentsList.insertBefore(newComment, commentsList.firstChild);
+
+        const currentCount = parseInt(commentsCount.textContent);
+        commentsCount.textContent = currentCount + 1;
+
+        const likeBtn = newComment.querySelector(".like-btn");
+        addLikeFunctionality(likeBtn);
+
+        newComment.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+
+      // Like functionality
+      function addLikeFunctionality(likeBtn) {
+        likeBtn.addEventListener("click", () => {
+          const likeCount = likeBtn.querySelector(".like-count");
+          const currentLikes = parseInt(likeCount.textContent);
+          const heart = likeBtn.querySelector("i");
+
+          if (heart.classList.contains("bi-heart")) {
+            heart.classList.remove("bi-heart");
+            heart.classList.add("bi-heart-fill");
+            likeCount.textContent = currentLikes + 1;
+            likeBtn.style.color = "#e74c3c";
+          } else {
+            heart.classList.remove("bi-heart-fill");
+            heart.classList.add("bi-heart");
+            likeCount.textContent = currentLikes - 1;
+            likeBtn.style.color = "";
+          }
+        });
+      }
+
+      // Add like functionality to existing comments
+      document.querySelectorAll(".like-btn").forEach(addLikeFunctionality);
+
+      // Reply functionality
+      document.querySelectorAll(".reply-btn").forEach((replyBtn) => {
+        replyBtn.addEventListener("click", () => {
+          alert("Chức năng trả lời đang được phát triển!");
+        });
+      });
+
+      // Load more comments
+      document.querySelector(".load-more-btn").addEventListener("click", () => {
+        alert("Đã hiển thị tất cả bình luận!");
+      });
+    </script>
+  </body>
+</html>

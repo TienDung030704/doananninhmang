@@ -1,0 +1,324 @@
+<!-- Rating Section Template -->
+<div class="rating-section">
+  <div class="rating-header">
+    <h3>Đánh Giá Bài Viết</h3>
+    <p>Bài viết này có hữu ích với bạn không?</p>
+  </div>
+
+  <div class="rating-stats">
+    <div class="average-rating">
+      <div class="rating-number">4.6</div>
+      <div class="rating-stars-display">
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-half"></i>
+      </div>
+      <div class="rating-count">dựa trên 28 đánh giá</div>
+    </div>
+
+    <div class="rating-bars">
+      <div class="rating-bar">
+        <span class="star-label">5★</span>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 68%"></div>
+        </div>
+        <span class="bar-count">19</span>
+      </div>
+      <div class="rating-bar">
+        <span class="star-label">4★</span>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 25%"></div>
+        </div>
+        <span class="bar-count">7</span>
+      </div>
+      <div class="rating-bar">
+        <span class="star-label">3★</span>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 7%"></div>
+        </div>
+        <span class="bar-count">2</span>
+      </div>
+      <div class="rating-bar">
+        <span class="star-label">2★</span>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 0%"></div>
+        </div>
+        <span class="bar-count">0</span>
+      </div>
+      <div class="rating-bar">
+        <span class="star-label">1★</span>
+        <div class="bar-container">
+          <div class="bar-fill" style="width: 0%"></div>
+        </div>
+        <span class="bar-count">0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rate-article">
+    <h4>Đánh giá bài viết này</h4>
+    <div class="star-rating" id="userRating">
+      <span class="star" data-rating="1">★</span>
+      <span class="star" data-rating="2">★</span>
+      <span class="star" data-rating="3">★</span>
+      <span class="star" data-rating="4">★</span>
+      <span class="star" data-rating="5">★</span>
+    </div>
+    <button class="rate-button" id="submitRating" disabled>Gửi Đánh Giá</button>
+    <div class="rating-message" id="ratingMessage" style="display: none"></div>
+  </div>
+</div>
+
+<!-- Comments Section Template -->
+<div class="comments-section">
+  <div class="comments-header">
+    <h3>
+      <i class="bi bi-chat-dots"></i>
+      Bình Luận
+      <span class="comments-count">15</span>
+    </h3>
+    <p>Chia sẻ suy nghĩ và kinh nghiệm của bạn</p>
+  </div>
+
+  <!-- Comment Form -->
+  <div class="comment-form">
+    <h4>Để lại bình luận</h4>
+    <form id="commentForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="commentName">Họ Tên *</label>
+          <input type="text" id="commentName" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="commentEmail">Email *</label>
+          <input type="email" id="commentEmail" name="email" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="commentContent">Bình Luận *</label>
+        <textarea
+          id="commentContent"
+          name="content"
+          placeholder="Chia sẻ suy nghĩ của bạn về bài viết..."
+          required
+        ></textarea>
+      </div>
+      <button type="submit" class="submit-comment">Gửi Bình Luận</button>
+    </form>
+  </div>
+
+  <!-- Comments List -->
+  <div class="comments-list">
+    <!-- Sample Comment 1 -->
+    <div class="comment">
+      <div class="comment-header">
+        <div class="comment-author">
+          <div class="author-avatar">Q</div>
+          <div class="author-info">
+            <h5>Quang Huy</h5>
+            <span class="comment-date">1 ngày trước</span>
+          </div>
+        </div>
+      </div>
+      <div class="comment-content">
+        <p>
+          Bài viết rất chi tiết và dễ hiểu! Cảm ơn bạn đã chia sẻ kinh nghiệm
+          thực tế. Những tips này rất hữu ích cho người mới như mình.
+        </p>
+      </div>
+      <div class="comment-actions">
+        <button class="comment-action like-btn">
+          <i class="bi bi-heart"></i>
+          <span class="like-count">6</span>
+        </button>
+        <button class="comment-action reply-btn">
+          <i class="bi bi-reply"></i>
+          Trả lời
+        </button>
+      </div>
+    </div>
+
+    <!-- Sample Comment 2 -->
+    <div class="comment">
+      <div class="comment-header">
+        <div class="comment-author">
+          <div class="author-avatar">N</div>
+          <div class="author-info">
+            <h5>Nam Võ</h5>
+            <span class="comment-date">3 ngày trước</span>
+          </div>
+        </div>
+      </div>
+      <div class="comment-content">
+        <p>
+          Mình đã apply được nhiều điều từ bài viết này vào dự án thực tế. Keep
+          writing more! 👍
+        </p>
+      </div>
+      <div class="comment-actions">
+        <button class="comment-action like-btn">
+          <i class="bi bi-heart"></i>
+          <span class="like-count">4</span>
+        </button>
+        <button class="comment-action reply-btn">
+          <i class="bi bi-reply"></i>
+          Trả lời
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Load More Comments -->
+  <div class="load-more-comments">
+    <button class="load-more-btn">Xem Thêm Bình Luận</button>
+  </div>
+</div>
+
+<!-- JavaScript Template -->
+<script>
+  // Rating System
+  const stars = document.querySelectorAll(".star");
+  const submitRatingBtn = document.getElementById("submitRating");
+  const ratingMessage = document.getElementById("ratingMessage");
+  let selectedRating = 0;
+
+  stars.forEach((star) => {
+    star.addEventListener("mouseover", () => {
+      const rating = parseInt(star.dataset.rating);
+      highlightStars(rating);
+    });
+
+    star.addEventListener("mouseout", () => {
+      highlightStars(selectedRating);
+    });
+
+    star.addEventListener("click", () => {
+      selectedRating = parseInt(star.dataset.rating);
+      highlightStars(selectedRating);
+      submitRatingBtn.disabled = false;
+    });
+  });
+
+  function highlightStars(rating) {
+    stars.forEach((star, index) => {
+      if (index < rating) {
+        star.classList.add("active");
+      } else {
+        star.classList.remove("active");
+      }
+    });
+  }
+
+  submitRatingBtn.addEventListener("click", () => {
+    if (selectedRating > 0) {
+      submitRatingBtn.disabled = true;
+      submitRatingBtn.textContent = "Đang gửi...";
+
+      setTimeout(() => {
+        ratingMessage.style.display = "block";
+        ratingMessage.className = "rating-message success";
+        ratingMessage.textContent = `Cảm ơn bạn đã đánh giá ${selectedRating} sao! Đánh giá của bạn đã được ghi nhận.`;
+        submitRatingBtn.textContent = "Đã gửi";
+      }, 1000);
+    }
+  });
+
+  // Comments System
+  const commentForm = document.getElementById("commentForm");
+  const commentsList = document.querySelector(".comments-list");
+  const commentsCount = document.querySelector(".comments-count");
+
+  commentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("commentName").value;
+    const email = document.getElementById("commentEmail").value;
+    const content = document.getElementById("commentContent").value;
+
+    if (name && email && content) {
+      addComment(name, content);
+      commentForm.reset();
+    }
+  });
+
+  function addComment(name, content) {
+    const newComment = document.createElement("div");
+    newComment.className = "comment";
+
+    const avatar = name.charAt(0).toUpperCase();
+    const currentTime = "vừa xong";
+
+    newComment.innerHTML = `
+      <div class="comment-header">
+        <div class="comment-author">
+          <div class="author-avatar">${avatar}</div>
+          <div class="author-info">
+            <h5>${name}</h5>
+            <span class="comment-date">${currentTime}</span>
+          </div>
+        </div>
+      </div>
+      <div class="comment-content">
+        <p>${content}</p>
+      </div>
+      <div class="comment-actions">
+        <button class="comment-action like-btn">
+          <i class="bi bi-heart"></i>
+          <span class="like-count">0</span>
+        </button>
+        <button class="comment-action reply-btn">
+          <i class="bi bi-reply"></i>
+          Trả lời
+        </button>
+      </div>
+    `;
+
+    commentsList.insertBefore(newComment, commentsList.firstChild);
+
+    const currentCount = parseInt(commentsCount.textContent);
+    commentsCount.textContent = currentCount + 1;
+
+    const likeBtn = newComment.querySelector(".like-btn");
+    addLikeFunctionality(likeBtn);
+
+    newComment.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  // Like functionality
+  function addLikeFunctionality(likeBtn) {
+    likeBtn.addEventListener("click", () => {
+      const likeCount = likeBtn.querySelector(".like-count");
+      const currentLikes = parseInt(likeCount.textContent);
+      const heart = likeBtn.querySelector("i");
+
+      if (heart.classList.contains("bi-heart")) {
+        heart.classList.remove("bi-heart");
+        heart.classList.add("bi-heart-fill");
+        likeCount.textContent = currentLikes + 1;
+        likeBtn.style.color = "#e74c3c";
+      } else {
+        heart.classList.remove("bi-heart-fill");
+        heart.classList.add("bi-heart");
+        likeCount.textContent = currentLikes - 1;
+        likeBtn.style.color = "";
+      }
+    });
+  }
+
+  // Add like functionality to existing comments
+  document.querySelectorAll(".like-btn").forEach(addLikeFunctionality);
+
+  // Reply functionality
+  document.querySelectorAll(".reply-btn").forEach((replyBtn) => {
+    replyBtn.addEventListener("click", () => {
+      alert("Chức năng trả lời đang được phát triển!");
+    });
+  });
+
+  // Load more comments
+  document.querySelector(".load-more-btn").addEventListener("click", () => {
+    alert("Đã hiển thị tất cả bình luận!");
+  });
+</script>
