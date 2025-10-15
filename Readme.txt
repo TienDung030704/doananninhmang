@@ -143,6 +143,18 @@ Mỗi bài blog được tích hợp **hệ thống rating và comments hoàn ch
 - SEO-friendly markup
 - Fast loading times
 
+### 🌐 **URL Website Live:**
+```
+https://tiendung030704.github.io/doananninhmang/
+```
+
+### 🎯 **Demo Features:**
+- Responsive design tương thích mọi thiết bị
+- Interactive blog system với rating và comments
+- Modern JavaScript ES6+ architecture
+- Bootstrap 5 framework integration
+- SEO-friendly structure và fast loading
+
 ## Liên hệ
 - **Email**: Contact thông qua form trên website
 - **Location**: TP. Hồ Chí Minh, Việt Nam
