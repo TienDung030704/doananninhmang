@@ -2242,9 +2242,10 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
+# Portfolio & Projects Section
 --------------------------------------------------------------*/
-.portfolio .portfolio-filters {
+.portfolio .portfolio-filters,
+.portfolio .project-filters {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -2254,7 +2255,8 @@ section,
   list-style: none;
 }
 
-.portfolio .portfolio-filters li {
+.portfolio .portfolio-filters li,
+.portfolio .project-filters li {
   padding: 8px 20px;
   font-size: 0.95rem;
   font-weight: 500;
@@ -2265,16 +2267,19 @@ section,
   color: var(--accent-color);
 }
 
-.portfolio .portfolio-filters li:hover {
+.portfolio .portfolio-filters li:hover,
+.portfolio .project-filters li:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
-.portfolio .portfolio-filters li.filter-active {
+.portfolio .portfolio-filters li.filter-active,
+.portfolio .project-filters li.filter-active {
   background-color: var(--accent-color);
   color: var(--contrast-color);
 }
 
-.portfolio .portfolio-card {
+.portfolio .portfolio-card,
+.portfolio .project-card {
   background-color: var(--surface-color);
   border-radius: 10px;
   overflow: hidden;
@@ -2283,31 +2288,37 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-card:hover {
+.portfolio .portfolio-card:hover,
+.portfolio .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.portfolio .portfolio-card:hover .portfolio-img .portfolio-overlay {
+.portfolio .portfolio-card:hover .portfolio-img .portfolio-overlay,
+.portfolio .project-card:hover .project-img .project-overlay {
   opacity: 1;
 }
 
-.portfolio .portfolio-card:hover .portfolio-img img {
+.portfolio .portfolio-card:hover .portfolio-img img,
+.portfolio .project-card:hover .project-img img {
   transform: scale(1.1);
 }
 
-.portfolio .portfolio-card .portfolio-img {
+.portfolio .portfolio-card .portfolio-img,
+.portfolio .project-card .project-img {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio .portfolio-card .portfolio-img img {
+.portfolio .portfolio-card .portfolio-img img,
+.portfolio .project-card .project-img img {
   width: 100%;
   height: auto;
   transition: transform 0.5s ease;
 }
 
-.portfolio .portfolio-card .portfolio-img .portfolio-overlay {
+.portfolio .portfolio-card .portfolio-img .portfolio-overlay,
+.portfolio .project-card .project-img .project-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -2322,7 +2333,8 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-card .portfolio-img .portfolio-overlay a {
+.portfolio .portfolio-card .portfolio-img .portfolio-overlay a,
+.portfolio .project-card .project-img .project-overlay a {
   width: 45px;
   height: 45px;
   background-color: var(--accent-color);
@@ -2335,35 +2347,41 @@ section,
   transition: all 0.3s ease;
 }
 
-.portfolio .portfolio-card .portfolio-img .portfolio-overlay a:hover {
+.portfolio .portfolio-card .portfolio-img .portfolio-overlay a:hover,
+.portfolio .project-card .project-img .project-overlay a:hover {
   background-color: color-mix(in srgb, var(--accent-color), #fff 20%);
   transform: translateY(-5px);
 }
 
-.portfolio .portfolio-card .portfolio-info {
+.portfolio .portfolio-card .portfolio-info,
+.portfolio .project-card .project-info {
   padding: 20px;
 }
 
-.portfolio .portfolio-card .portfolio-info h4 {
+.portfolio .portfolio-card .portfolio-info h4,
+.portfolio .project-card .project-info h4 {
   font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 5px;
   color: var(--heading-color);
 }
 
-.portfolio .portfolio-card .portfolio-info p {
+.portfolio .portfolio-card .portfolio-info p,
+.portfolio .project-card .project-info p {
   font-size: 0.9rem;
   color: var(--default-color);
   margin-bottom: 10px;
 }
 
-.portfolio .portfolio-card .portfolio-info .portfolio-tags {
+.portfolio .portfolio-card .portfolio-info .portfolio-tags,
+.portfolio .project-card .project-info .project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.portfolio .portfolio-card .portfolio-info .portfolio-tags span {
+.portfolio .portfolio-card .portfolio-info .portfolio-tags span,
+.portfolio .project-card .project-info .project-tags span {
   font-size: 0.8rem;
   padding: 4px 12px;
   border-radius: 20px;
@@ -2386,6 +2404,24 @@ section,
   border-color: color-mix(in srgb, var(--accent-color), #000 10%);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Projects & Skills with ID */
+#projects-skills {
+  background-color: var(--background-color);
+  padding: 60px 0;
+}
+
+#projects-skills .section-title h2 {
+  color: var(--heading-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#projects-skills .section-title p {
+  color: var(--default-color);
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 /*--------------------------------------------------------------
