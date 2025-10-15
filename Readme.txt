@@ -149,4 +149,4 @@ Mỗi bài blog được tích hợp **hệ thống rating và comments hoàn ch
 - **Blog**: Xem chi tiết các bài viết chuyên môn trong mục Blog
 
 ---
-*DũngWebBlog được xây dựng với tình yêu và đam mê công nghệ 💻*
+*DũngWebBlog - Tạo ra với đam mê và chuyên môn trong lập trình 💻*
